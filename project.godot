@@ -26,7 +26,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Godot Project Template"
+config/name="Final-Project-RPS"
 run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
 
