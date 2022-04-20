@@ -1,7 +1,7 @@
 class_name Player
 extends KinematicBody2D
 
-export var gravity = 100
+export var gravity = 60
 
 # Must be positive
 export var slow_multiplier = 0.5
@@ -16,7 +16,12 @@ onready var Animations = $Animations
 onready var Coyote = $Coyote
 onready var JumpBuffer = $JumpBuffer
 
+var coyote_default = 0.1
+var jump_buffer_default = 0.1
+
 func _ready():
+	coyote_default = Coyote.wait_time
+	jump_buffer_default = JumpBuffer.wait_time
 	states.init(self)
 
 func _unhandled_input(event):
@@ -45,8 +50,8 @@ func slow():
 
 func slow_exit():
 	is_slow = false
-	Coyote.wait_time = 0.1
-	JumpBuffer.wait_time = 0.1
+	Coyote.wait_time = coyote_default
+	JumpBuffer.wait_time = jump_buffer_default
 	Engine.time_scale = 1
 
 #No longer grounded when the timer ends
