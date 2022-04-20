@@ -19,11 +19,11 @@ func enter():
 func exit():
 	pass
 
-func input(event):
+func input(_event):
 	return State.Null
 
-func process(delta):
+func process(_delta):
 	return State.Null
 
-func physics_process(delta):
+func physics_process(_delta):
 	return State.Null

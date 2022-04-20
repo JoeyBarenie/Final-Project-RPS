@@ -36,11 +36,11 @@ frames = SubResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Coyote" type="Timer" parent="."]
-wait_time = 0.15
+wait_time = 0.1
 one_shot = true
 
 [node name="JumpBuffer" type="Timer" parent="."]
-wait_time = 0.25
+wait_time = 0.1
 one_shot = true
 
 [node name="StateMachine" type="Node" parent="."]
