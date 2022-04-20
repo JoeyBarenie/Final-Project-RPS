@@ -1,11 +1,11 @@
 extends BaseState
 
-func input(event):
+func input(_event):
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 		return State.Walk
 	return State.Null
 
-func physics_process(delta):
+func physics_process(_delta):
 	player.velocity.y += player.gravity
 	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
 	

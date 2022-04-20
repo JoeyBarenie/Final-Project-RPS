@@ -1,34 +1,34 @@
 extends BaseState
 
-export var jump_strength = 1500
+export var jump_strength = 1000
 export var speed = 500
+export var jump_cut = 0.5
 
 func enter():
-	player.pressed_jump = false
-	player.was_grounded = false
 	player.Coyote.stop()
 	player.JumpBuffer.stop()
+	player.pressed_jump = false
+	player.was_grounded = false
 	player.velocity.y = -jump_strength
+	if player.is_slow:
+		player.velocity.y /= player.slow_multiplier * 1.5
 
-func physics_process(delta):
-	player.velocity.x = move() * speed
-	player.velocity.y += player.gravity
-	player.velocity = player.move_and_slide(player.velocity, Vector2.UP)
+func input(_event):
+	if Input.is_action_just_released("up"):
+		player.velocity.y *= jump_cut
+	return State.Null
+
+func physics_process(_delta):
+	player.move(speed)
 	
-	if player.velocity.y < 0:
+	# Spaghetti to stop double jumping
+	player.was_grounded = false
+	
+	if player.velocity.y > 0:
 		return State.Fall
 	elif player.is_on_floor():
-		if move() != 0:
+		if player.move_direction() != 0:
 			return State.Walk
 		return State.Idle
 	
 	return State.Null
-
-func move():
-	if Input.is_action_pressed("left"):
-		player.Animations.flip_h = true
-		return -1
-	elif Input.is_action_pressed("right"):
-		player.Animations.flip_h = false
-		return 1
-	return 0
