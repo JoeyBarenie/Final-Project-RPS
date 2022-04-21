@@ -28,20 +28,21 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 65.0
-margin_bottom = 14.0
-text = "Welcome!"
+margin_bottom = 31.0
+text = "Welcome!
+"
 align = 1
 
 [node name="Play" type="Button" parent="VBoxContainer"]
-margin_top = 18.0
+margin_top = 35.0
 margin_right = 65.0
-margin_bottom = 38.0
+margin_bottom = 55.0
 text = "Play"
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
-margin_top = 42.0
+margin_top = 59.0
 margin_right = 65.0
-margin_bottom = 62.0
+margin_bottom = 79.0
 text = "Quit"
 
 [connection signal="button_down" from="VBoxContainer/Play" to="." method="_on_Play_button_down"]
