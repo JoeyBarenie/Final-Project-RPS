@@ -1,10 +1,11 @@
 extends BaseState
 
-export var jump_strength = 1000
+export var jump_strength = 1050
 export var speed = 500
-export var jump_cut = 0.5
+export var jump_cut = 0.4
 
 func enter():
+	player.snap_vector = Vector2.ZERO
 	player.Coyote.stop()
 	player.JumpBuffer.stop()
 	player.pressed_jump = false
@@ -12,6 +13,7 @@ func enter():
 	player.velocity.y = -jump_strength
 	if player.is_slow:
 		player.velocity.y /= player.slow_multiplier * 1.5
+	player.snap_vector = Vector2.DOWN
 
 func input(_event):
 	if Input.is_action_just_released("up"):
