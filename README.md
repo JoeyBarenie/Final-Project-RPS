@@ -26,6 +26,8 @@ Features:
 Assets, or resources used:
 - kenny.nl - 2D platformer kit (tilemap, enemy)
 - Opengameart - [box](https://opengameart.org/content/box-2) by Alekei
+- Sound effects from [freesound.org](https://freesound.org/) and [prosoundeffects.com](https://www.prosoundeffects.com/)
+- Music from [Patrick de Arteaga](https://patrickdearteaga.com/)
 
 ## References
 
