@@ -21,7 +21,7 @@ Features:
 - Multiple Levels
 - Time Slow feature
 - Moveable character
-- 1 enemy
+- 1 enemy type
 
 Assets, or resources used:
 - kenny.nl - 2D platformer kit (tilemap)
