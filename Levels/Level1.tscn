@@ -433,7 +433,7 @@ drag_margin_bottom = 0.1
 script = ExtResource( 3 )
 
 [node name="Exit" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1849, 530 )
+position = Vector2( 1755, 516 )
 next_level_name = "Level2"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
