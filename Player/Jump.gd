@@ -14,7 +14,7 @@ func enter():
 	player.was_grounded = false
 	player.velocity.y = -jump_strength
 	if player.is_slow:
-		player.velocity.y /= player.slow_multiplier * 1.5
+		player.velocity.y /= player.slow_multiplier * 1.35
 	player.snap_vector = Vector2.DOWN
 
 func input(_event):

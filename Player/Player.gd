@@ -18,6 +18,7 @@ onready var states = $StateMachine
 onready var Animations = $Animations
 onready var Coyote = $Coyote
 onready var JumpBuffer = $JumpBuffer
+onready var TimeSound = $TimeSound
 
 var coyote_default = 0.1
 var jump_buffer_default = 0.1
@@ -47,12 +48,18 @@ func _input(_event):
 		slow_exit()
 
 func slow():
+	snap_length = 8
+	if !TimeSound.playing:
+		TimeSound.play()
 	is_slow = true
 	Coyote.wait_time = 0.1 * slow_multiplier
 	JumpBuffer.wait_time = 0.1 * slow_multiplier
 	Engine.time_scale = slow_multiplier
 
 func slow_exit():
+	snap_length = 16
+	if TimeSound.playing:
+		TimeSound.stop()
 	is_slow = false
 	Coyote.wait_time = coyote_default
 	JumpBuffer.wait_time = jump_buffer_default
