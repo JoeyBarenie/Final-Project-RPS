@@ -2,6 +2,9 @@ extends BaseState
 
 export var speed = 500
 
+func enter():
+	player.Animations.play("Walk")
+
 func physics_process(_delta: float) -> int:
 	player.move(speed)
 	

@@ -5,6 +5,8 @@ export var speed = 500
 export var jump_cut = 0.4
 
 func enter():
+	player.Animations.play("Jump")
+	
 	player.snap_vector = Vector2.ZERO
 	player.Coyote.stop()
 	player.JumpBuffer.stop()

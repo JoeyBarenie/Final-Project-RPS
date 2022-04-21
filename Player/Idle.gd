@@ -1,5 +1,8 @@
 extends BaseState
 
+func enter():
+	player.Animations.play("Idle")
+
 func input(_event):
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 		return State.Walk

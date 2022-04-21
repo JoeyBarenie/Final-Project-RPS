@@ -4,6 +4,8 @@ export var speed = 500
 export var fall_multiplier = 1.75
 
 func enter():
+	player.Animations.play("Fall")
+	
 	if player.was_grounded:
 		player.Coyote.start()
 	player.gravity *= fall_multiplier
