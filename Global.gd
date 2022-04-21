@@ -17,3 +17,6 @@ func unpause():
 
 func quit():
 	get_tree().quit()
+
+func lose():
+	var _temp = get_tree().change_scene("res://UI/Lose.tscn")
