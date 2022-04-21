@@ -1,7 +1,8 @@
 class_name Player
 extends KinematicBody2D
 
-export var gravity = 60
+export var gravity = 50
+export var snap_length = 16
 
 # Must be positive
 export var slow_multiplier = 0.5
@@ -10,6 +11,8 @@ var velocity = Vector2.ZERO
 var was_grounded = true
 var pressed_jump = false
 var is_slow = false
+var snap_vector = Vector2.DOWN
+var slope_threshold = deg2rad(50)
 
 onready var states = $StateMachine
 onready var Animations = $Animations
@@ -35,6 +38,7 @@ func _physics_process(delta):
 
 func _input(_event):
 	if Input.is_action_just_pressed("up"):
+		snap_vector = Vector2.ZERO
 		pressed_jump = true
 		JumpBuffer.start()
 	if Input.is_action_pressed("slow"):
@@ -67,7 +71,7 @@ func move(speed):
 	velocity.y += gravity
 	if is_slow:
 		velocity.x /= slow_multiplier
-	velocity = move_and_slide(velocity, Vector2.UP)
+	velocity.y = move_and_slide_with_snap(velocity, snap_vector * snap_length, Vector2.UP, true, 4, slope_threshold).y
 
 func move_direction():
 	if Input.is_action_pressed("left"):
