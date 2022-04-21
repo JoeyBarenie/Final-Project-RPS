@@ -36,4 +36,8 @@ Assets, or resources used:
 Possible future development: creation of a boss fight
 
 # Created by: Red Panda Studios
-Joey Barenie, Thade Sylvester, Matt Miller
+Joey Barenie - Level design
+
+Thade Sylvester - Programming
+
+Matt Miller - Art & sound
