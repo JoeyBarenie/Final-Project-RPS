@@ -21,7 +21,7 @@ Features:
 
 Assets, or resources used:
 - kenny.nl - 2D platformer kit (tilemap)
-- 
+- Opengameart - [box](https://opengameart.org/content/box-2) by Alekei
 
 ## References
 
