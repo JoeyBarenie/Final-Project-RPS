@@ -1,13 +1,11 @@
 # Final-Project
-the creation of a time crunch theme game in Godot
-MSCH-C220 Game Jam, April 21st, 2022
+The creation of a time crunch theme game in Godot MSCH-C220 Game Jam, April 21st, 2022
 
 ## Theme
 We interpreted the time crunch theme as the character having the ability to control the flow of time
 
 ## Game Play
-The objective for the player is to save time
-Follow the platforms, dodge enemies, and complete some parkour to find the portals to the next area
+The objective for the player is to save time Follow the platforms, dodge enemies, and complete some parkour to find the portals to the next area
 
 WASD - Movement
 
