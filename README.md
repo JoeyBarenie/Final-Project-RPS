@@ -9,6 +9,9 @@ We interpreted the time crunch theme as the character having the ability to cont
 The objective for the player is to save time
 Follow the platforms, dodge enemies, and complete some parkour to find the portals to the next area
 
+WASD - Movement
+Spacebar - Slow time
+
 ## Impediments
 The lack of time impeded on some of our ideas.
 
