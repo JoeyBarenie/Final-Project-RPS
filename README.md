@@ -23,7 +23,8 @@ Features:
 
 Assets, or resources used:
 - kenny.nl - 2D platformer kit (tilemap, enemy)
-* [Platformer Art: Extended Enemies](https://kenney.nl/assets/platformer-art-extended-enemies)
+    [Platformer Art: Extended Enemies](https://kenney.nl/assets/platformer-art-extended-enemies)
+    [Platformer Art: Pixel Redux](https://kenney.nl/assets/platformer-art-pixel-redux)
 - Opengameart - [box](https://opengameart.org/content/box-2) by Alekei
 - Sound effects from [freesound.org](https://freesound.org/) and [prosoundeffects.com](https://www.prosoundeffects.com/)
 - Music from [Patrick de Arteaga](https://patrickdearteaga.com/)
