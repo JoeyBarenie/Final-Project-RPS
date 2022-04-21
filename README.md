@@ -10,6 +10,7 @@ The objective for the player is to save time
 Follow the platforms, dodge enemies, and complete some parkour to find the portals to the next area
 
 WASD - Movement
+
 Spacebar - Slow time
 
 ## Impediments
