@@ -20,8 +20,8 @@ The lack of time impeded on some of our ideas.
 Features:
 - Multiple Levels
 - Time Slow feature
-- Moveable characters
-- 
+- Moveable character
+- 1 enemy
 
 Assets, or resources used:
 - kenny.nl - 2D platformer kit (tilemap)
