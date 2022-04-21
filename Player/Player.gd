@@ -6,7 +6,9 @@ export var snap_length = 16
 
 # Must be positive
 export var slow_multiplier = 0.5
+export var max_health = 3
 
+var health = 3
 var velocity = Vector2.ZERO
 var was_grounded = true
 var pressed_jump = false
@@ -24,6 +26,7 @@ var coyote_default = 0.1
 var jump_buffer_default = 0.1
 
 func _ready():
+	health = max_health
 	coyote_default = Coyote.wait_time
 	jump_buffer_default = JumpBuffer.wait_time
 	states.init(self)
@@ -88,3 +91,16 @@ func move_direction():
 		Animations.flip_h = false
 		return 1
 	return 0
+
+func damage(d):
+	health -= d
+	if health <= 0:
+		Global.lose()
+	$Tween.interpolate_property(self, "modulate", 
+	  Color(1, 1, 1, 1), Color(1, 0, 0, 1), 0.5, 
+	  Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.start()
+	$Tween.interpolate_property(self, "modulate", 
+	  Color(1, 0, 0, 1), Color(1, 1, 1, 1), 0.5, 
+	  Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.start()
